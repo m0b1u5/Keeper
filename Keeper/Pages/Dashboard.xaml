@@ -1,0 +1,363 @@
+﻿<Page x:Class="Keeper.Pages.Dashboard"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Keeper.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="720" d:DesignWidth="1130"
+      Title="Dashboard">
+
+    <Grid>
+        <Border Background="#f3f4f9" CornerRadius="5" MouseDown="Border_MouseDown" />
+        <ScrollViewer>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                   
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="*" />
+                    
+
+                </Grid.RowDefinitions>
+
+                <!-- Header -->
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        
+                    </Grid.ColumnDefinitions>
+                    <Border Background="#2196f3" Grid.ColumnSpan="3"  />
+
+                    <!-- Header Text-->
+                    <StackPanel Orientation="Horizontal" Margin=" 100 0 0 0" VerticalAlignment="Bottom" Grid.ColumnSpan="2" >
+                        <TextBlock Foreground="#fff" Text="DASHBOARD             " FontSize="22"  FontStyle="Normal">
+                        </TextBlock>
+                        <TextBlock Foreground="#fff" Text="CHURCH OVERVIEW" FontSize="22"  FontStyle="Normal">
+                        </TextBlock>
+                    </StackPanel>
+                    
+                </Grid>
+
+                <!-- Card Row with Four Items -->
+                <Grid Grid.Row="1" Height="100" VerticalAlignment="Top" Margin="5 10 5 5">                    
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid Grid.Column="0" Grid.ColumnSpan="2" >
+                        <Border Background="#ffffff" Margin="10 0 0 0" CornerRadius="5" />
+                        <StackPanel>
+                            <Grid>
+                                <StackPanel>
+                                    <TextBlock Foreground="#448aff" HorizontalAlignment="Center" FontSize="22" FontWeight="Bold" >
+                                    Welcome Back To Keeper
+                                    </TextBlock>
+                                    <TextBlock Foreground="#121f43" HorizontalAlignment="Left" Margin="15 0 0 0" FontSize="14" FontWeight="Thin" >
+                                    Dashboard  Gives you a Quick Overview of all your Information
+                                    </TextBlock>
+                                </StackPanel>
+
+
+                            </Grid>
+                            
+                        </StackPanel>
+                    </Grid>
+
+                    <!-- New members info -->
+                    <Grid Grid.Column="2" Margin="10 0 0 0" Grid.ColumnSpan="1" >
+                        <Border Background="#ffffff" CornerRadius="5" />
+                        <StackPanel>
+                            <Grid>
+                                <StackPanel>
+                                    <TextBlock Foreground="#448aff" HorizontalAlignment="Center" FontSize="22" FontWeight="Bold" >
+                                    New Members
+                                    </TextBlock>
+                                    <TextBlock Foreground="#37474f" HorizontalAlignment="Center" Margin="5 0 0 0" FontSize="14" FontWeight="Thin" >
+                                    New Members who joined Last Week
+                                    </TextBlock>
+                                    <StackPanel Orientation="Horizontal" >
+                                        <TextBlock x:Name="newmemberstext" HorizontalAlignment="Center" Text="88" Foreground="#37474f"  Margin="10 0 5 0" FontSize="44" FontWeight="Thin" >
+
+                                        </TextBlock>
+                                        
+
+                                    </StackPanel>
+                                    
+                                </StackPanel>
+
+
+                            </Grid>
+
+                        </StackPanel>
+                    </Grid>
+
+                    <!-- Groups info -->
+                    <Grid Grid.Column="3" Margin="10 0 10 0" Grid.ColumnSpan="1" >
+                        <Border Background="#ffffff" CornerRadius="5" />
+                        <StackPanel>
+                            <Grid>
+                                <StackPanel>
+                                    <TextBlock Foreground="#448aff" HorizontalAlignment="Center" FontSize="22" FontWeight="Bold" >
+                                    Groups
+                                    </TextBlock>
+                                    <TextBlock Foreground="#121f43" HorizontalAlignment="Left" Margin="5 0 0 0" FontSize="14" FontWeight="Thin" >
+                                    Groups created By Members
+                                    </TextBlock>
+                                    <StackPanel Orientation="Horizontal" >
+                                        <TextBlock x:Name="groupstext" HorizontalAlignment="Left" Text="88" Foreground="#121f43"  Margin="10 0 5 0" FontSize="44" FontWeight="Thin" >
+
+                                        </TextBlock>
+                                        <Button Width="70" Height="19" Margin="15 0 0 0" HorizontalAlignment="Right" Background="#f2f9fe" BorderBrush="#2499ef" >
+                                            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text="View Groups" Foreground="#121f43"   FontSize="12" FontWeight="Thin" >
+
+                                            </TextBlock>
+
+                                        </Button>
+
+                                    </StackPanel>
+
+                                </StackPanel>
+
+
+                            </Grid>
+
+                        </StackPanel>
+                    </Grid>
+
+                    
+
+                </Grid>
+
+                <!-- Card Row with Three Items -->
+                <Grid Grid.Row="2" Height="300" VerticalAlignment="Top" Margin="10 120 5 5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>                       
+                    </Grid.ColumnDefinitions>
+
+
+                    <Grid Grid.Column="0" Margin="5 0 5 0" >
+                        <Border CornerRadius="5" Background="#fff"></Border>
+                        <Grid>
+                            <StackPanel Orientation="Vertical">
+                                <StackPanel Height="30" VerticalAlignment="Top" Orientation="Horizontal">
+                                    <TextBlock Text="Recent Events" Foreground="#121f43" HorizontalAlignment="Left" Margin="5 0 10 0" FontSize="24" FontWeight="Thin" />
+                                </StackPanel>
+
+                                <DataGrid x:Name="eventsgrid">
+                                    <DataGrid.Resources>
+                                        <Style TargetType="DataGridRow">
+                                            <EventSetter Event="MouseDoubleClick" Handler="DataGridRow_MouseDoubleClick_1"/>
+                                        </Style>
+                                    </DataGrid.Resources>
+
+                                </DataGrid>
+                            </StackPanel>
+                            
+                        </Grid>
+
+                    </Grid>
+
+                    <!-- members info -->
+                    <Grid Grid.Column="1" Margin="10 0 10 0" Grid.ColumnSpan="1" Grid.Row="0" >
+                        <Border Background="#ffffff" CornerRadius="5" />
+                        <StackPanel Margin="10">
+                            <Grid>
+                                <StackPanel>
+                                    <TextBlock Foreground="#448aff" HorizontalAlignment="left" FontSize="22" FontWeight="Bold" >
+                                    Members
+                                    </TextBlock>
+                                    <TextBlock Foreground="#37474f" HorizontalAlignment="Left" Margin="5 0 0 0" FontSize="14" FontWeight="Thin" >
+                                    Church membership Overview
+                                    </TextBlock>
+                                    <StackPanel Orientation="Horizontal" >
+                                        <TextBlock x:Name="memberstext" HorizontalAlignment="Center" Text="88" Foreground="#37474f"  Margin="10 0 5 0" FontSize="34" FontWeight="Thin" > </TextBlock>
+                                        <TextBlock Foreground="#37474f" HorizontalAlignment="Left" Margin="5 10 0 0" FontSize="24" FontWeight="Thin" >
+                                    Members
+                                        </TextBlock>
+
+                                    </StackPanel>
+
+                                </StackPanel>
+
+
+                            </Grid>
+                            
+                            <!--Finances-->
+                            <Grid Margin="0 10 0 0">
+                                <StackPanel>
+                                    <TextBlock Foreground="#448aff" HorizontalAlignment="left" FontSize="22" FontWeight="Bold" >
+                                    Donations
+                                    </TextBlock>
+                                    <TextBlock Foreground="#37474f" HorizontalAlignment="Left" Margin="5 0 0 0" FontSize="14" FontWeight="Thin" >
+                                    Financial Donations Overview
+                                    </TextBlock>
+                                    <StackPanel Orientation="Horizontal" >
+                                        <TextBlock x:Name="donationstext"  HorizontalAlignment="Center" Text="88" Foreground="#37474f"  Margin="10 0 5 0" FontSize="34" FontWeight="Thin" ></TextBlock>
+                                        <TextBlock Foreground="#37474f" HorizontalAlignment="Left" Margin="5 18 0 0" FontSize="16" FontWeight="Thin" >
+                                    Ksh Collected
+                                        </TextBlock>
+
+                                    </StackPanel>
+
+                                </StackPanel>
+                               
+                                
+
+
+                            </Grid>
+
+                            <!--Finance Stats-->
+                            <Grid Margin="0 10 0 0">
+                                <StackPanel Orientation="Horizontal">
+                                    <StackPanel>
+                                        <TextBlock Text="Mobile Money  " Foreground="#448aff" HorizontalAlignment="left" FontSize="14" FontWeight="Bold"/>
+                                        <TextBlock x:Name="mobiletext" Text="500" Foreground="#37474f" HorizontalAlignment="Left" Margin="5 0 0 0" FontSize="14" FontWeight="Thin"/>
+
+                                    </StackPanel>
+
+                                    <StackPanel>
+                                        <TextBlock Text="Bank   " Foreground="#448aff" HorizontalAlignment="left" FontSize="14" FontWeight="Bold"/>
+                                        <TextBlock x:Name="chequetext" Foreground="#37474f" HorizontalAlignment="Left" Margin="5 0 0 0" FontSize="14" FontWeight="Thin" >
+                                    200
+                                        </TextBlock>
+
+                                    </StackPanel>
+
+                                     
+
+                                    <StackPanel>
+                                        <TextBlock Text="Cash " Foreground="#448aff" HorizontalAlignment="left" FontSize="14" FontWeight="Bold"/>
+                                        <TextBlock x:Name="cashtext" Foreground="#37474f" HorizontalAlignment="Left" Margin="5 0 0 0" FontSize="14" FontWeight="Thin" >
+                                    200
+                                        </TextBlock>
+
+                                    </StackPanel>
+
+
+                                </StackPanel>
+                                
+
+
+
+
+                            </Grid>
+
+
+                        </StackPanel>
+                    </Grid>
+
+                    <Grid Grid.Column="2" >
+                        <Border Background="#fff" CornerRadius="5" />
+                        <StackPanel Orientation="Vertical">
+
+                            <StackPanel Orientation="Horizontal" >
+                                <TextBlock Foreground="#121f43" HorizontalAlignment="Left" Margin="5 0 10 0" FontSize="24" FontWeight="Thin" >
+                                    Recently Sent Messages
+                                </TextBlock>
+
+                                <Path  Width="30" Height="24" VerticalAlignment="Bottom" Stretch="Uniform" Fill="#448aff" Data="M511.6 36.86l-64 415.1c-1.5 9.734-7.375 18.22-15.97 23.05c-4.844 2.719-10.27 4.097-15.68 4.097c-4.188 0-8.319-.8154-12.29-2.472l-122.6-51.1l-50.86 76.29C226.3 508.5 219.8 512 212.8 512C201.3 512 192 502.7 192 491.2v-96.18c0-7.115 2.372-14.03 6.742-19.64L416 96l-293.7 264.3L19.69 317.5C8.438 312.8 .8125 302.2 .0625 289.1s5.469-23.72 16.06-29.77l448-255.1c10.69-6.109 23.88-5.547 34 1.406S513.5 24.72 511.6 36.86z" />
+
+
+
+
+                            </StackPanel>
+
+                            <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" >
+                                <Grid>
+                                    <!--  <DataGrid x:Name="messagelistview" ></DataGrid> -->
+                                    <!-- Messages Container-->
+                                    <StackPanel>
+
+                                        <!-- Message 1-->
+                                        <StackPanel Orientation="Vertical">
+
+                                            <StackPanel Margin="5" Orientation="Horizontal" >
+                                                <TextBlock Text="Title :       "></TextBlock>
+                                                <TextBlock x:Name="msgtitle1" Text="The new message has been sent, review changes " TextWrapping="Wrap" ></TextBlock>
+                                            </StackPanel>
+
+                                            <StackPanel Margin="5" Orientation="Horizontal" >
+                                                <TextBlock Text="Message :"></TextBlock>
+                                                <TextBlock x:Name="msgtext1"  Text="The new message has been sent, review changes that have been made to the tex and save the changes this is just test code to see how the text wrapping is implemented so that i can modify it , it seems to run to the sides forever " Width="290" TextWrapping="Wrap"></TextBlock>
+                                            </StackPanel>
+
+                                        </StackPanel>
+
+                                        <!-- Message 2-->
+                                        <StackPanel Orientation="Vertical">
+
+                                            <StackPanel Margin="5" Orientation="Horizontal" >
+                                                <TextBlock Text="Title :       "></TextBlock>
+                                                <TextBlock x:Name="msgtitle2" Text="The new message has been sent, review changes " TextWrapping="Wrap" ></TextBlock>
+                                            </StackPanel>
+
+                                            <StackPanel Margin="5" Orientation="Horizontal" >
+                                                <TextBlock Text="Message :"></TextBlock>
+                                                <TextBlock x:Name="msgtext2"  Text="The new message has been sent, review changes that have been made to the tex and save the changes this is just test code to see how the text wrapping is implemented so that i can modify it , it seems to run to the sides forever " Width="290" TextWrapping="Wrap"></TextBlock>
+                                            </StackPanel>
+
+                                        </StackPanel>
+
+                                        <!-- Message 3-->
+                                        <StackPanel Orientation="Vertical">
+
+                                            <StackPanel Margin="5" Orientation="Horizontal" >
+                                                <TextBlock Text="Title :       "></TextBlock>
+                                                <TextBlock x:Name="msgtitle3" Text="The new message has been sent, review changes " TextWrapping="Wrap" ></TextBlock>
+                                            </StackPanel>
+
+                                            <StackPanel Margin="5" Orientation="Horizontal" >
+                                                <TextBlock Text="Message :"></TextBlock>
+                                                <TextBlock x:Name="msgtext3"  Text="The new message has been sent, review changes that have been made to the tex and save the changes this is just test code to see how the text wrapping is implemented so that i can modify it , it seems to run to the sides forever " Width="290" TextWrapping="Wrap"></TextBlock>
+                                            </StackPanel>
+
+                                        </StackPanel>
+
+                                        <!-- Message 4-->
+                                        <StackPanel Orientation="Vertical">
+
+                                            <StackPanel Margin="5" Orientation="Horizontal" >
+                                                <TextBlock Text="Title :       "></TextBlock>
+                                                <TextBlock x:Name="msgtitle4" Text="The new message has been sent, review changes " TextWrapping="Wrap" ></TextBlock>
+                                            </StackPanel>
+
+                                            <StackPanel Margin="5" Orientation="Horizontal" >
+                                                <TextBlock Text="Message :"></TextBlock>
+                                                <TextBlock x:Name="msgtext4"  Text="The new message has been sent, review changes that have been made to the tex and save the changes this is just test code to see how the text wrapping is implemented so that i can modify it , it seems to run to the sides forever " Width="290" TextWrapping="Wrap"></TextBlock>
+                                            </StackPanel>
+
+                                        </StackPanel>
+
+
+
+                                    </StackPanel>
+                                </Grid>
+
+
+                            </ScrollViewer>
+                            
+                        </StackPanel>
+                    </Grid>
+                    
+
+                    
+                    
+                </Grid>
+                
+
+            </Grid>
+            
+        </ScrollViewer>
+    </Grid>
+</Page>

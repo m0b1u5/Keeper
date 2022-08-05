@@ -1,0 +1,108 @@
+﻿<Window x:Class="Keeper.addmember"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Keeper"
+        mc:Ignorable="d"
+        Title="addmember"    
+         Height="650" Width="600" 
+        Background="Transparent" 
+        WindowStyle="None" WindowStartupLocation="CenterScreen" 
+        AllowsTransparency="True">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!--Left Section-->
+        <ListBox  Grid.Column="0" SelectionMode="Single" Background="#3498DB" x:Name="sidebar" Margin="10" BorderThickness="0">
+            <StackPanel Margin="10 5 0 0" HorizontalAlignment="Center">
+                <Button  Width="50" Click="Button_Click" Background="Transparent" BorderBrush="Transparent" Foreground="#ffffff" Height="50" VerticalAlignment="Bottom" Margin="0, 0, 0,10">
+                    <Path Fill="#ffffff" Stroke="Transparent" StrokeThickness="10" Stretch="Uniform"  Data="M288 256C288 273.7 273.7 288 256 288C238.3 288 224 273.7 224 256V32C224 14.33 238.3 0 256 0C273.7 0 288 14.33 288 32V256zM80 256C80 353.2 158.8 432 256 432C353.2 432 432 353.2 432 256C432 201.6 407.3 152.9 368.5 120.6C354.9 109.3 353 89.13 364.3 75.54C375.6 61.95 395.8 60.1 409.4 71.4C462.2 115.4 496 181.8 496 255.1C496 388.5 388.5 496 256 496C123.5 496 16 388.5 16 255.1C16 181.8 49.75 115.4 102.6 71.4C116.2 60.1 136.4 61.95 147.7 75.54C158.1 89.13 157.1 109.3 143.5 120.6C104.7 152.9 80 201.6 80 256z" ></Path>
+                </Button>
+            </StackPanel>
+
+
+        </ListBox>
+
+        <!--Input Section-->
+        <Grid Grid.Column="1" Background="#FeFeFe" >
+            <StackPanel Orientation="Vertical" Margin="5" >
+                <TextBlock HorizontalAlignment="Center" Margin="0 0 0 7" FontSize="20" FontWeight="Thin" Text="Add Member Details Below"></TextBlock>
+                <StackPanel Orientation="Horizontal" Margin="5">
+                    <TextBlock Text="Name :               " HorizontalAlignment="Left" Margin="0 0 0 7" FontSize="20" FontWeight="Thin" ></TextBlock>
+                    <TextBox  x:Name="Nametext" Width="250" FontSize="20" FontWeight="Thin" Margin="15 0 0 0" ></TextBox>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="5">
+                    <TextBlock Text="Phone :         " Margin="0 0 0 7" FontSize="20" FontWeight="Thin" Width="144" />
+                    <TextBox  x:Name="Phonetext" Width="250" FontSize="20" FontWeight="Thin" Margin="15 0 0 0" HorizontalAlignment="Right" ></TextBox>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="5">
+                    <TextBlock Text="Address :            " HorizontalAlignment="Left" Margin="0 0 0 7" FontSize="20" FontWeight="Thin" ></TextBlock>
+                    <TextBox  x:Name="Addresstext" Width="250" FontSize="20" FontWeight="Thin" Margin="15 0 0 0"></TextBox>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="5">
+                    <TextBlock Text="Membership :     " HorizontalAlignment="Left" Margin="0 0 0 7" FontSize="20" FontWeight="Thin" ></TextBlock>
+                    <TextBox  x:Name="Membershiptext" Width="250" FontSize="20" FontWeight="Thin" Margin="15 0 0 0"></TextBox>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="5">
+                    <TextBlock Text="DOB :             " Margin="0 0 0 7" FontSize="20" FontWeight="Thin" Width="144" />
+                    <TextBox  x:Name="Agetext" Width="250" FontSize="20" FontWeight="Thin" Margin="15 0 0 0"></TextBox>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="5">
+                    <TextBlock Text="Email :           " Margin="0 0 0 7" FontSize="20" FontWeight="Thin" Width="144" />
+                    <TextBox  x:Name="Emailtext" Width="250" FontSize="20" FontWeight="Thin" Margin="15 0 0 0"></TextBox>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="5">
+                    <TextBlock Text="Minister :       " Margin="0 0 0 7" FontSize="20" FontWeight="Thin" Width="144" />
+                    <TextBox  x:Name="Ministertext" Width="250" FontSize="20" FontWeight="Thin" Margin="15 0 0 0"></TextBox>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal"  Margin="5">
+                    <TextBlock Text="City :             " Margin="0 0 0 7" FontSize="20" FontWeight="Thin" Width="144" />
+                    <TextBox  x:Name="Citytext" Width="250" FontSize="20" FontWeight="Thin" Margin="15 0 0 0" HorizontalAlignment="Right"></TextBox>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal"  Margin="5">
+                    <TextBlock Text="Gender :        " Margin="0 0 0 7" FontSize="20" FontWeight="Thin" Width="144" />
+                    <TextBox  x:Name="Gendertext" Width="250" FontSize="20" FontWeight="Thin" Margin="15 0 0 0" HorizontalAlignment="Right"></TextBox>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal"  Margin="5">
+                    <TextBlock Text="Occupation :        " Margin="0 0 0 7" FontSize="20" FontWeight="Thin" Width="144" />
+                    <TextBox  x:Name="Occupationtext" Width="250" FontSize="20" FontWeight="Thin" Margin="15 0 0 0" HorizontalAlignment="Right"></TextBox>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal"  Margin="5">
+                    <TextBlock Text="Family ID :        " Margin="0 0 0 7" FontSize="20" FontWeight="Thin" Width="144" />
+                    <TextBox  x:Name="Familytext" Width="250" FontSize="20" FontWeight="Thin" Margin="15 0 0 0" HorizontalAlignment="Right"></TextBox>
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="15" HorizontalAlignment="Center">
+                    <Button Click="SubmitMember" Background="#3498DB" HorizontalAlignment="Center">
+                        <TextBlock Text="Submit"  Margin="10 0" Foreground="#ffffff" FontSize="20" FontWeight="Thin" ></TextBlock>
+                    </Button>
+                </StackPanel>
+
+
+
+
+
+
+
+            </StackPanel>
+
+
+        </Grid>
+
+    </Grid>
+</Window>
